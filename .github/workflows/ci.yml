@@ -1,1 +1,15 @@
+name: CI Pipeline
+
+on:
+  push:
+
+jobs:
+  run-ci:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Execute Script
+        run: bash ./ci-script.sh
 
